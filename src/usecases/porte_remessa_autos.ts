@@ -1,10 +1,10 @@
 import { defaultOutput, UFESP_2024 } from "./helper";
 
 
-type output = defaultOutput | {
+type output = {
     valorPorVolume: number,
     total: number,
-}
+} & defaultOutput
 
 export function porteRemessaDeAutos(volumes: number): output {
     const valorPorVolume = 1.672 * UFESP_2024;
